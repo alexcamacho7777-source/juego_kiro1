@@ -1,33 +1,47 @@
-# MONSTRU
+# MONSTRU — Edición Esmeralda del Bosque
 
-Un juego de monstruos por turnos que corre en el navegador. Todo el contenido (monstruos, tipos, movimientos, historia, personajes) es **inventado y original**.
+Un juego de monstruos por turnos con **estética Game Boy** (pixel art, paleta verde-gris de 4 tonos). Corre en el navegador. Todo el contenido —criaturas, nombres, tipos, movimientos, objetos, historia, personajes— es **original e inventado**. No contiene material de Nintendo ni de Pokémon.
 
 ## Cómo jugar
 
 Haz **doble clic en `JUGAR.bat`**. Se abre solo en tu navegador. Deja la ventana negra abierta mientras juegas.
 
-(Usa Node, que ya tienes instalado. No hay que instalar nada más.)
+(Usa Node, que ya tienes. No hay que instalar nada más.)
 
-## Qué hay dentro
+## Qué tiene (Paso 1 — la base)
 
-- **12 monstruos** repartidos en **6 tipos**: fuego, agua, planta, eléctrico, roca y normal.
-- **Líneas evolutivas** reales: tus monstruos evolucionan al subir de nivel (hasta 3 fases).
-- **Combate por turnos** con ventajas de tipo (súper eficaz / poco eficaz), movimientos con PP y daño realista.
-- **Captura** de monstruos salvajes (más fácil con poca vida).
-- **Un rival, Nova**, al que te enfrentas **3 veces** con equipos cada vez más fuertes. Vencerlo 3 veces te hace Campeón.
-- **Sprites 2D animados**: flotan, tiemblan y parpadean en rojo al recibir daño.
+- **Estética Game Boy**: pantalla verde-gris, pixel art de verdad, cajas y barras clásicas.
+- **Pueblo inicial** visto desde arriba, con casas, caminos, agua, árboles y hierba alta.
+- **Elegir monstruo inicial** (fuego / agua / planta) de manos del Prof. Cedro.
+- **Combate por turnos** clásico: cajas de texto, barras de vida y experiencia, ventajas de tipo.
+- **Menú principal** con 4 pestañas:
+  - **Equipo**: tus monstruos, nivel y vida.
+  - **Pokédex**: vistos y atrapados.
+  - **Mochila**: objetos (Esfera, Poción, Superpoción, Revivir).
+  - **Guardar**: guarda la partida en este navegador.
+- **Captura** de monstruos salvajes con la Esfera.
+- **Rival NOVA** al que te enfrentas (equipos cada vez más fuertes).
+- **15 criaturas** en 6 tipos, con líneas evolutivas.
 
 ## Controles
 
 | Tecla | Acción |
 |---|---|
 | Flechas / W A S D | moverte por el mapa |
-| (pisar la hierba) | encontrar monstruos salvajes |
+| (pisar hierba alta) | encontrar monstruos salvajes |
+| ENTER | abrir el menú principal |
 | 1-4 | elegir opción / movimiento en combate |
-| Clic | también funciona en todos los menús |
-| Esc | volver atrás en el menú de combate |
+| Esc | volver atrás |
+| Clic | funciona en todos los menús |
 
-## Monstruos por tipo
+## Plan por fases (vamos creciendo)
+
+1. **Base jugable** (hecho): estilo Game Boy, pueblo, combate, menú, guardar. ← estás aquí
+2. **Mundo**: más ciudades y rutas, hasta 6 arenas (gimnasios) con sus líderes.
+3. **Contenido**: subir a 100 criaturas, legendarios, más objetos y habilidades.
+4. **Historia**: trama completa y rival.
+
+## Criaturas actuales
 
 - **Fuego**: Emberín → Flamuro → Pyroleo
 - **Agua**: Gotita → Maruala → Tsunareo
@@ -38,9 +52,11 @@ Haz **doble clic en `JUGAR.bat`**. Se abre solo en tu navegador. Deja la ventana
 
 ## Archivos
 
-- `index.html` — la página del juego
-- `game.js` — mundo, combate e historia
+- `index.html` — la pantalla del juego (marco Game Boy)
+- `game.js` — mundo, combate, menús, guardado
 - `engine.js` — reglas (niveles, evolución, daño, captura)
-- `data.js` — monstruos, tipos y movimientos
-- `render.js` — dibujo de los sprites
+- `data.js` — criaturas, tipos y movimientos
+- `sprites.js` — pixel art de cada criatura
+- `gb.js` — paleta y dibujo por rejilla de píxeles
+- `render.js` — pinta los sprites
 - `server.js` + `JUGAR.bat` — lanzador local
